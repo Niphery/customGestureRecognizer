@@ -33,6 +33,7 @@ let defaultColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
 class GameViewController: UIViewController {
 
   let game = MatchingGame()
+	var circleRecognizer: CircleGestureRecognizer!
 
   // The image views
   fileprivate var imageViews = [UIImageView]()
@@ -54,6 +55,8 @@ class GameViewController: UIViewController {
     imageViews = [image1, image2, image3, image4]
 
     // create and add the circle recognizer here
+		circleRecognizer = CircleGestureRecognizer(target: self, action: #selector(self.circled))
+		view.addGestureRecognizer(circleRecognizer)
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -145,6 +148,14 @@ class GameViewController: UIViewController {
 
 
   // MARK: - Circle Stuff
-
+	func circled(gesture: CircleGestureRecognizer) {
+		switch gesture.state {
+		case .ended:
+			let center = gesture.location(in: view)
+			findCircledView(center)
+		default:
+			break
+		}
+	}
 
 }

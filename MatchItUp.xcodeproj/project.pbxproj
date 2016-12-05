@@ -17,6 +17,7 @@
 		1ABC80A31AC96EF900F15569 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABC80A11AC96EF900F15569 /* LaunchScreen.xib */; };
 		1AC124881AE2DBDD00B051D7 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC124871AE2DBDD00B051D7 /* GameOverViewController.swift */; };
 		1AF3F2F01AE23078000B8FB9 /* CircleFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF3F2EF1AE23078000B8FB9 /* CircleFit.swift */; };
+		C98A43B51DF50D4B002B7486 /* CircleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A43B41DF50D4B002B7486 /* CircleGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		1ABC80A21AC96EF900F15569 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1AC124871AE2DBDD00B051D7 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		1AF3F2EF1AE23078000B8FB9 /* CircleFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleFit.swift; sourceTree = "<group>"; };
+		C98A43B41DF50D4B002B7486 /* CircleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGestureRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				1ABC809F1AC96EF900F15569 /* Images.xcassets */,
 				1ABC80A11AC96EF900F15569 /* LaunchScreen.xib */,
 				1ABC80961AC96EF900F15569 /* Supporting Files */,
+				C98A43B41DF50D4B002B7486 /* CircleGestureRecognizer.swift */,
 			);
 			path = MatchItUp;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A26AF711AE1298A00C6E0EA /* RoundedImageView.swift in Sources */,
+				C98A43B51DF50D4B002B7486 /* CircleGestureRecognizer.swift in Sources */,
 				1A6D2FA31AE7BDFD001C9DDC /* CircleDrawView.swift in Sources */,
 				1A26AF731AE12FEA00C6E0EA /* MatchingGame.swift in Sources */,
 				1AF3F2F01AE23078000B8FB9 /* CircleFit.swift in Sources */,
