@@ -52,4 +52,12 @@ class CircleGestureRecognizer: UIGestureRecognizer {
 			state = .changed
 		}
 	}
+
+	override func reset() {
+		super.reset()
+		touchedPoints.removeAll(keepingCapacity: true)
+		path = CGMutablePath()
+		isCircle = false
+		state = .possible
+	}
 }
