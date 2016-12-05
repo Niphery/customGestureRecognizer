@@ -14,11 +14,16 @@ class CircleGestureRecognizer: UIGestureRecognizer {
 	private(set) var fitResult = CircleResult()
 	private(set) var tolerance: CGFloat = 0.2
 	private(set) var isCircle = false
+	private(set) var path = CGMutablePath()
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
 		super.touchesBegan(touches, with: event)
 		if touches.count != 1 { state = .failed }
 		state = .began
+		let window = view?.window
+		if let loc = touches.first?.location(in: window) {
+			path.move(to: CGPoint(x: loc.x, y: loc.y))
+		}
 	}
 
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
@@ -42,6 +47,7 @@ class CircleGestureRecognizer: UIGestureRecognizer {
 		if let loc = touches.first?.location(in: window) {
 			// 3
 			touchedPoints.append(loc)
+			path.addLine(to: CGPoint(x: loc.x, y: loc.y))
 			// 4
 			state = .changed
 		}

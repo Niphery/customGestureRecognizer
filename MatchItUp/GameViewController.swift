@@ -152,6 +152,10 @@ class GameViewController: UIViewController {
 		switch gesture.state {
 		case .ended:
 			findCircledView(gesture.fitResult.center)
+		case .began:
+			circlerDrawer.clear()
+		case .changed:
+			circlerDrawer.updatePath(gesture.path)
 		default:
 			break
 		}
