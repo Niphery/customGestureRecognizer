@@ -151,8 +151,7 @@ class GameViewController: UIViewController {
 	func circled(gesture: CircleGestureRecognizer) {
 		switch gesture.state {
 		case .ended:
-			let center = gesture.location(in: view)
-			findCircledView(center)
+			findCircledView(gesture.fitResult.center)
 		default:
 			break
 		}
